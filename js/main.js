@@ -1,86 +1,45 @@
-// CODIGO DE SIMULADOR
-//Este calculo se realiza presionando los botones del deporte elegido.
-// se agrego ARRAY y SWITCH 
 
-class Actividades{
-    constructor(tiros, pases, habilidad) {  
-      this.tiros = tiros
-      this.pases = pases
-      this.habilidad = habilidad
-     }
-   
-      getTiros() {
-      console.log(this.tiros);
-      }
-      getPases() {
-      console.log(this.pases);
-      }
-      getHabilidad() {
-      console.log(this.habilidad);
-      }
-    }
-  
-    const ingresa = () => { 
-    let tiros = parseInt(prompt("Ingrese el numero de tiros convertidos"))
-    let pases = parseInt(prompt("Ingrese el numero de pases correctos"))
-    let habilidad = parseInt(prompt("Ingrese el numero de veces que se completo el circuito"))
-   
-    // ARRAY agregado 
-    
-    let promedio = [tiros + pases + habilidad] / 3
+// Se simplifico codigo con DOM 
+function CalcularPromedio(){
+    let p1 = document.getElementById("n1").value
+    let p2 = document.getElementById("n2").value
+    let p3 = document.getElementById("n3").value
+    let pro = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3))/3
+    document.getElementById("promedio").innerHTML = Math.ceil(pro)
 
-    const Basket = new Actividades(tiros, pases, habilidad)
-    
-    
-    Basket.getTiros()
-    Basket.getPases()
-    Basket.getHabilidad()
-
-    //REDONDEO devuelve el entero mayor o igual más próximo
-    alert("Tu promedio es de : " + Math.ceil(promedio))
-
-    if (promedio >= 100){
-        alert("Aprobado")
+    if (pro >= 100){
+    swal("Aprobado!", "Por favor click en el boton!", "success")
     }else{
-        alert("Desaprobado")
+    swal("Desaprobado!", "Por favor click en el boton!", "error")
     }
-    
     //ARRAY Y SWITCH se debe ingresar con mayuscula los dias de la semana.
+    // se agrega evento
+    let dia = document.getElementById("e1").value
     const diaSemana =["LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO"]
-    let dia = prompt ("Ingresar el dia de entrenamiento") 
-
-while (dia != "CERRAR"){
-switch (dia) {
-
-    case diaSemana[0]:
-    alert("El entrenamiento del Lunes" + "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    
+        switch (dia) {
+ 
+            case diaSemana[0]:
+    swal("El entrenamiento del Lunes" + "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[1]: 
-    alert("El entrenamiento del Martes"+ "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    swal("El entrenamiento del Martes"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[2]:
-    alert("El entrenamiento del Miercoles"+ "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    swal("El entrenamiento del Miercoles"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[3]: 
-    alert("El entrenamiento del Jueves"+ "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    swal("El entrenamiento del Jueves"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[4]: 
-    alert("El entrenamiento del Viernes"+ "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    swal("El entrenamiento del Viernes"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[5]: 
-    alert("El entrenamiento del Sabado"+ "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
+    swal("El entrenamiento del Sabado"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
     break;
     case diaSemana[6]: 
-    alert("El entrenamiento del Domingo" + "\n " + "Tiros: " + tiros  + "\n " + "Pases: " + pases + "\n " + "Habilidad: " + habilidad + "\n " + "Promedio de entrenamiento: " + Math.ceil(promedio));
-    break;
-    case 'CERRAR':
-    default:
-    alert('Debes escribir "CERRAR" para ingresar otro dia');
-}
-
-dia = prompt ("Ingresa CERRAR para salir")
-}
-  
+    swal("El entrenamiento del Domingo" + "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
+    break
+    
+} 
    }
-       
-   ingresa()

@@ -11,17 +11,17 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-bottom: 3em;
-    background-image: linear-gradient(to bottom, #15151ade, #2b2b33ec, #050507ec);
+    background-image: linear-gradient(to bottom, #f71c1c, #f847478a, #f8f2f1ec);
     overflow-x: hidden;
     height: 100vh; 
 }
   
 .title__header{
-    text-align: center;
+   text-align: center;
     font-weight: bold;
-    color: azure;
+    color: rgb(253, 247, 247);
 }
 
 .respmenu a {
@@ -29,11 +29,12 @@ body {
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-    border-bottom: 2px solid #456789;
+    border-bottom: 2px solid #f2f3f5;
     max-width: 200px;
-    background-image: linear-gradient(to bottom,#234567, #4452a3de, #050507ec);
+    background-image: linear-gradient(to bottom,#f50808, #f32424, #f8f5f5ec);
     font-variant: small-caps;
     text-shadow: 1px 1px black;
+     
   }
   .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
     position: absolute;
@@ -55,10 +56,11 @@ body {
     opacity: 0;
   }
   .respmenu {
-    color: white;
+    color: rgb(243, 241, 241);
     position: relative;
-    background: linear-gradient(to bottom,#234567, #4452a3de, #e6e6ebec);
+    background: linear-gradient(to bottom,#f50606, #f10a0ade, #e6e6ebec);
     min-height: 48px;
+    
   }
   
   .respmenu nav {
@@ -80,12 +82,35 @@ body {
 .sect {
   width: 100%;
   min-height: 500px;
+  background: linear-gradient(to bottom,#f1ebeb, #f3f1f1de, #f74d4db9);
+  z-index: 1;
+  opacity: .85;
 }  
 video {
   position: relative;
   right: 0;
   bottom: 0;
   min-width: 105%;
-  min-height: 100%;
+  min-height: 95%;
   
 } 
+.card-img-top1{
+  height: 30rem;
+}
+.card-img-top2{
+  height: 30rem;
+}
+.card-img-top3{
+  height: 30rem;
+}
+
+*{box-sizing:border-box;}
+
+form{
+	width:80%;
+    text-align: center;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:rgba(229, 229, 235, 0.877);
+}

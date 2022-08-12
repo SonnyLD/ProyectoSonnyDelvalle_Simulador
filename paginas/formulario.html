@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shorcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Formulario</title>
+</head>
+<header>
+    <div>
+      <!--haciendo click en el logo te envia a la pagina de inicio-->
+        <a href="/proyecto_2/index.html">
+            <img
+              class="logo"
+              src="/proyecto_2/imagenes/CHOICE.png"
+              alt="Esto es logo..."
+              width="100"
+            />
+          </a>
+    </div>
+    <div>
+        <h1 class="title__header">CHOICE TO TRAIN</h1>
+        <p style="text-align: center; font-weight: bold ;">Entrenamiento de efectividad</p>
+    </div>
+   <div class="respmenu">
+    <input type="checkbox">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+    <nav>
+      <ul> 
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Deportes</a></li>
+      <li><a href="">Metodo de trabajo</a></li>
+      <li><a href="">Quienes somos</a></li>
+      </ul> 
+    </nav>
+   </div>
+</header>
+<body>
+     <!-- Se agrega formulario con modificaciones-->
+     <form style="margin-top: 30px; display: flex; flex-direction: column; font-size: large;">
+        <h2 class="form-title">Promedio de evaluacion de entrenamiento </h2>
+        
+        <p>Ingrese el numero de tiros convertidos <br> <input style="width:100px; text-align: center; font-size: medium;" type="text" id="n1"></p>
+        <p>Ingrese el numero de pases correctos <br> <input style="width:100px; text-align: center;font-size: medium;" type="text" id="n2"></p>
+        <p>Ingrese el numero de veces que se completo el circuito <br> <input style="width:100px; text-align: center; font-size: medium;" type="text" id="n3"></p>
+        <p><input style="width:200px; font-size: large;" type="button" value="Calcular" onclick="CalcularPromedio()"></p>
+        <p id="promedio" style="font-weight:bold; font-size: 40px"></p>
+        <p>Ingresar el dia de entrenamiento (MAYUSCULA) <br> <input style="width:100px; text-align: center" type="text" id="e1"></p>
+        <p><input style="width:200px; font-size: large;" type="button" value="Resumen" onclick="CalcularPromedio()"></p>    
+
+    </form>
+    <footer>
+      <h3>Todos los derechos reservados 2022</h3>
+ </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ff77cfd398.js"
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/proyecto_2/js/main.js"></script>
+</html>
