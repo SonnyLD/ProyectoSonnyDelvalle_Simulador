@@ -1,45 +1,37 @@
 
 // Se simplifico codigo con DOM 
 function CalcularPromedio(){
+    let dia = document.getElementById("e1").value
     let p1 = document.getElementById("n1").value
     let p2 = document.getElementById("n2").value
     let p3 = document.getElementById("n3").value
-    let pro = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3))/3
-    document.getElementById("promedio").innerHTML = Math.ceil(pro)
 
-    if (pro >= 100){
-    swal("Aprobado!", "Por favor click en el boton!", "success")
-    }else{
-    swal("Desaprobado!", "Por favor click en el boton!", "error")
-    }
-    //ARRAY Y SWITCH se debe ingresar con mayuscula los dias de la semana.
-    // se agrega evento
-    let dia = document.getElementById("e1").value
-    const diaSemana =["LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO"]
+    let pro = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3))/3
+    document.getElementById("promedio").value = Math.ceil(pro)
     
-        switch (dia) {
- 
-            case diaSemana[0]:
-    swal("El entrenamiento del Lunes" + "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[1]: 
-    swal("El entrenamiento del Martes"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[2]:
-    swal("El entrenamiento del Miercoles"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[3]: 
-    swal("El entrenamiento del Jueves"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[4]: 
-    swal("El entrenamiento del Viernes"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[5]: 
-    swal("El entrenamiento del Sabado"+ "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break;
-    case diaSemana[6]: 
-    swal("El entrenamiento del Domingo" + "\n " + "Tiros: " + p1  + "\n " + "Pases: " + p2 + "\n " + "Habilidad: " + p3 + "\n " + "Promedio de entrenamiento: " + Math.ceil(pro));
-    break
+    // Operador avanzado
+    pro >= 100 ? swal("Aprobado!", "Por favor click en el boton!", "success") : swal("Desaprobado!", "Por favor click en el boton!", "error")
     
-} 
+    //Se almacena todo en el localstorage y se agrega tabla.
+    localStorage.setItem("e1", dia);
+    localStorage.setItem("n1", p1);
+    localStorage.setItem("n2", p2);
+    localStorage.setItem("n3", p3);
+    localStorage.setItem("promedio", Math.ceil(pro));
+    document.getElementById("e1").value = "";
+    document.getElementById("n1").value = "";
+    document.getElementById("n2").value = "";
+    document.getElementById("n3").value = "";
+    document.getElementById("promedio").value = "";
+
+    localStorage.getItem("e1");
+    localStorage.getItem("n1");
+    localStorage.getItem("n2");
+    localStorage.getItem("n3");
+    localStorage.getItem("promedio");
+    let fila="<tr><td>"+ dia +"</td><td>"+ p1 +"</td><td>"+ p2 +"</td><td>"+ p3 +"</td><td>"+ Math.ceil(pro)+"</td></tr>";
+    let btn = document.createElement("TR");
+   	btn.innerHTML=fila;
+    document.getElementById("tablita").appendChild(btn);
+
    }
