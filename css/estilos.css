@@ -116,16 +116,17 @@ form{
 }
 table{
   position: relative;
-  left: 28%;
   border-collapse: collapse;
-  color:rgb(6, 2, 24);
+  color:rgb(242, 241, 245);
   font-weight:bold;
   text-align: center;
 }
 table, td, th, tr {
-  border: 4px solid rgb(235, 17, 17);
+  border: 4px solid rgb(131, 114, 114);
   padding:30px;
   
 }
 
-
+table thead  {
+  background-color: #438c6c;
+}

@@ -35,3 +35,32 @@ function CalcularPromedio(){
     document.getElementById("tablita").appendChild(btn);
 
    }
+   
+   let contenido = document.querySelector('#contenido')
+
+function traer() {
+    fetch('semana.json')
+        .then(res => res.json())
+        .then(datos => {
+            // console.log(datos)
+            tabla(datos)
+        })
+}
+
+function tabla(datos) {
+    // console.log(datos)
+    contenido.innerHTML = ''
+    for(let valor of datos){
+        //console.log(valor.dia)
+        contenido.innerHTML += `
+        
+        <tr>
+            <th scope="row">${ valor.id }</th>
+            <td>${ valor.dia }</td>
+            <td>${ valor.promedio }</td>
+            <td>${ valor.estado ? "Aprobado" : "Desaprobado" }</td>
+        </tr>
+        
+        `
+    }
+}
