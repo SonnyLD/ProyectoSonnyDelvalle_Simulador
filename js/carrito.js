@@ -6,55 +6,55 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Correa de entrenamiento para tiros de baloncesto',
             precio: 19,
-            imagen: '/proyecto_2/imagenes/correa-entrenamiento-tiro-baloncesto.jpg'
+            imagen: '../imagenes/correa-entrenamiento-tiro-baloncesto.jpg'
         },
         {
             id: 2,
             nombre: 'Ayuda de tiros de baloncesto',
             precio: 10,
-            imagen: '/proyecto_2/imagenes/FNBX FlickGlove - Ayuda de disparo de baloncesto.jpg'
+            imagen: '../imagenes/FNBX FlickGlove - Ayuda de disparo de baloncesto.jpg'
         },
         {
             id: 3,
             nombre: 'Lentes de vision para dribbling',
             precio: 5,
-            imagen: '/proyecto_2/imagenes/gafas-limitadoras-de-vision-dribbling.jpg'
+            imagen: '../imagenes/gafas-limitadoras-de-vision-dribbling.jpg'
         },
         {
             id: 4,
             nombre: 'Rebotador de pases para baloncesto',
             precio: 75,
-            imagen: '/proyecto_2/imagenes/GoSports Rebotador de baloncesto con marco ajustable.jpg'
+            imagen: '../imagenes/GoSports Rebotador de baloncesto con marco ajustable.jpg'
         },
         {
             id: 5,
             nombre: 'Esquina Shot para futbol',
             precio: 15,
-            imagen: '/proyecto_2/imagenes/Esquina_shot.jpg'
+            imagen: '../imagenes/Esquina_shot.jpg'
         },
         {
             id: 6,
             nombre: 'Rebounder para pases',
             precio: 45,
-            imagen: '/proyecto_2/imagenes/Football_Rebounder.jpg'
+            imagen: '../imagenes/Football_Rebounder.jpg'
         },
         {
             id: 7,
             nombre: 'Reborder y basket para skills en futbol',
             precio: 110,
-            imagen: '/proyecto_2/imagenes/Fútbol Rebound Nets Negro.jpg'
+            imagen: '../imagenes/Fútbol Rebound Nets Negro.jpg'
         },
         {
             id: 8,
             nombre: 'kick kit entrenamiendo con la pelota',
             precio: 20,
-            imagen: '/proyecto_2/imagenes/Star Kick Kit para el entrenamiento con la pelota.jpg'
+            imagen: '../imagenes/Star Kick Kit para el entrenamiento con la pelota.jpg'
         },
         {
             id: 9,
             nombre: 'Kit de entrenamiento de agilidad',
             precio: 20,
-            imagen: '/proyecto_2/imagenes/RENRANRING Agility.jpg'
+            imagen: '../imagenes/RENRANRING Agility.jpg'
         }
 
     ];
