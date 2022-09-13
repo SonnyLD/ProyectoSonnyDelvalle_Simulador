@@ -51,9 +51,9 @@
         "id": 6,
         "dia": "Sabado",
         "tiros": "100",
-        "pases": "200",
-        "habilidad": "100",
-        "promedio": "134",
+        "pases": "90",
+        "habilidad": "80",
+        "promedio": "90",
         "estado": true
     },
     {

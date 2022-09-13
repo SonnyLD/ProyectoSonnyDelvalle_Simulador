@@ -16,7 +16,7 @@ async function autenticar() {
       showCancelButton: true,
       confirmButtonText: 'Validar',
       cancelButtonText: 'Cancelar',
-      confirmButtonColor: '#40B340',
+      confirmButtonColor: '#B5B2B2',
       cancelButtonColor: '#FF0000',
       showCloseButton: true,
       focusConfirm: true,

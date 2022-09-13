@@ -8,16 +8,18 @@
 
 html {
     overflow-x: hidden; 
+     
 }
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-bottom: 3em;
-    background-image: linear-gradient(to bottom, #f71c1c, #f847478a, #f8f2f1ec);
+    background-image: linear-gradient(to bottom, #f71c1c, #fff9faea, #f8f1f2ec);
     overflow-x: hidden;
-    height: 100vh; 
+    height: 100vh;
+    
 }
-  
+
 .title__header{
    text-align: center;
     font-weight: bold;
@@ -31,7 +33,7 @@ body {
     padding: 10px 20px;
     border-bottom: 2px solid #f2f3f5;
     max-width: 200px;
-    background-image: linear-gradient(to bottom,#f50808, #f32424, #f8f5f5ec);
+    background-image: linear-gradient(to bottom,#f50808, #f52a2aea, #f8f5f5ec);
     font-variant: small-caps;
     text-shadow: 1px 1px black;
      
@@ -48,7 +50,7 @@ body {
   }
   
   .respmenu .fa-bars, .respmenu .fa-times {
-    font-size: 48px;
+    font-size: 35px;
     pointer-events: none;
   }
   
@@ -90,7 +92,7 @@ video {
   position: relative;
   right: 0;
   bottom: 0;
-  min-width: 105%;
+  min-width: 100%;
   min-height: 95%;
   
 } 
@@ -108,7 +110,7 @@ video {
 
 form{
 	width:80%;
-    text-align: center;
+  text-align: center;
 	padding:16px;
 	border-radius:10px;
 	margin:auto;
@@ -203,5 +205,10 @@ input[type="submit"] {
 @media only screen and (min-width: 77.5rem /*1240px*/ ) {
   .ft-main {
       justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .col-sm-6{
+      display: none;
   }
 }
